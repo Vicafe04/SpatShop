@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body onload="load()">
+    <header>
+        <img src="../../docs/IMG/shiba.png" width="200px" alt="">
+        <img src="../docs/spatshop.gif" alt="">
+
+    </header>
+    <div class="left-container">
+        <h1>Reservas</h1>
+        <div class="list">
+            <div class="item-list model">
+                <p id="hotelId"></p>
+                <p id="nome"></p>
+                <p id="porte"></p>
+                <p id="descricao"></p>
+                <p id="horaReserva"></p>
+                <button id="delBTN">Cancelar reserva</button>
+            </div>
+        </div>
+        <div class="reserva">
+            <button class="addReserva" onclick="reserva.classList.toggle('oculto');
+        loadPet()">Reservar</button>
+        </div>
+    </div>
+    <div id="reserva" class="modal oculto">
+        <div class="form">
+            <input type="number" name="petId" id="inpId">
+            <select class="opcList" name="" id="">
+                <option id="" value="">Selecione</option>
+            </select>
+            <textarea name=""
+                placeholder="EXEMPLO: Estadia de no maximo até 7 dias.Banho e tosa quinta feira e treinamento sexta feira."
+                id="observations" cols="30" rows="10"></textarea>
+            <button class="confirmBTN" onclick="reservar()">Confirmar</button>
+            <button onclick="reserva.classList.toggle('oculto')" class="modal_close">x</button>
+
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

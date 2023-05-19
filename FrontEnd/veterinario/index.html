@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/FrontEnd/docs/patas.png" type="image/x-icon">
+    <title>Veterinario</title>
+</head>
+<body>
+    <header>
+        <div class="table-header">
+            <h1 class="leiter-header">
+                Spat-Shop
+            </h1>
+        </div>
+    </header>
+    <button class="btn-modal" id="abrirModal">Serviços</button>
+    <div id="meuModal" class="modal">
+        <div class="modal-conteudo">
+        <span class="fechar">&times;</span>
+            <div class="leiter-modal">
+                <p>Insira o ID do Pet</p>
+                <input type="text" placeholder="Insira o ID"><br>
+                <label for="raca">Tipos de serviços</label><br>
+                <select name="raca" id="raca">
+                    <option value="#">Escolha uma das opções abaixo</option>
+                    <option value="">Veterinario</option>
+                    <option value="">Esteticista</option>
+                    <option value="">Treinador</option>
+                    <option value="">Osteopata</option>
+                </select>
+                <p>Descrição do Serviço</p>
+                <input type="text" placeholder="Descrição"><br>
+                <button onclick="cadastrarServicoBtn()" class="btn">Cadastrar Serviço</button>
+            </div>
+        </div>
+    </div>
+    <div class="table-body">
+        <ul id="lista-dados"></ul>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

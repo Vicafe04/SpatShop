@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: none;
+}
+
+.table-header{
+    background-color: rgb(209, 209, 209);
+    height: auto;
+    width: 120vh;
+    margin-top: 2vh;
+    margin-left: 32vh;
+    border: 2px solid black;
+    border-radius: 30vh;
+}
+
+.leiter-header{
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+    font-size: 25vh;
+    color: rgb(192, 228, 228);
+    font-style: italic;
+    -webkit-text-stroke: 2px #000;
+}
+
+.table-body{
+    /* background-color: black; */
+    border: 2px solid black;
+    margin-top: 2vh;
+    margin-left: 52vh;
+    height: 60vh;
+    width: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+/*Modal*/
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-conteudo {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 15%;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-top: 30vh;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 38px;
+    margin-top: -12px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn{
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.btn-modal{
+    margin-left: 850px;
+    margin-top: 20px;
+    height: 30px;
+    width: 120px;
+    border-radius: 40px;
+    cursor: pointer;
+}

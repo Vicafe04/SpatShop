@@ -1,0 +1,114 @@
+<<<<<<< HEAD
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+   id      Int      @id @default(autoincrement())
+  nome    String
+  email   String   @unique
+  senha   String
+  telefone String
+  pets Pet[]
+}
+
+model Pet {
+  id      Int      @id @default(autoincrement())
+  nome String
+  porte String
+  descricao String?
+  userId Int? 
+  reserva Hotel[]
+  servico Servico[]
+  usuario   Usuario? @relation(fields: [userId], references: [id])
+}
+
+model Servico {
+  id      Int      @id @default(autoincrement())
+  descricao String
+  servico String
+  area String
+  petId Int
+  pet   Pet @relation(fields: [petId], references: [id])
+}
+
+model Hotel {
+  id      Int      @id @default(autoincrement())
+  descricao String?
+  horaPedido   DateTime   @default(now())
+  petId Int
+  pet   Pet @relation(fields: [petId], references: [id])
+}
+
+model Funcionario {
+  id Int @id @default(autoincrement())
+  nome String
+  email String
+  senha String
+  role String
+=======
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Usuario {
+   id      Int      @id @default(autoincrement())
+  nome    String
+  email   String   @unique
+  senha   String
+  telefone String
+  pets Pet[]
+}
+
+model Pet {
+  id      Int      @id @default(autoincrement())
+  nome String
+  porte String
+  descricao String?
+  userId Int? 
+  usuario   Usuario? @relation(fields: [userId], references: [id])
+  hotelId Int?
+  hotel   Hotel? @relation(fields: [hotelId], references: [id])
+  servicoId Int?
+  servico   Servico? @relation(fields: [servicoId], references: [id])
+}
+
+model Servico {
+  id      Int      @id @default(autoincrement())
+  descricao String
+  servico String
+  area String
+  pets Pet[]
+}
+
+model Hotel {
+  id      Int      @id @default(autoincrement())
+  descricao String?
+  horaPedido   DateTime   @default(now())
+  pets Pet[]
+}
+
+model Funcionario {
+  id Int @id @default(autoincrement())
+  nome String
+  email String
+  senha String
+  role String
+>>>>>>> 49aa57789142cbf3948acc9c360523a474e28296
+}
