@@ -1,23 +1,28 @@
 *{
     margin: 0;
     padding: 0;
-    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 200px;
 }
 
 header{
-    background-color: rgb(0, 153, 255);
-    width: 1880px;
-    height: 110px;
-    margin-top: 40px;
-    border-radius: 25px;
     
+    background: linear-gradient(rgb(0, 153, 255));
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
+#gif_logo{
+    margin-right: 125px;
+}
+
+#shiba_logo{
+    position: absolute;
+}
