@@ -11,12 +11,16 @@ body{
 }
 
 header{
-    
-    background: linear-gradient(rgb(0, 153, 255));
+    background: linear-gradient(#00f7ff, #0099ff);
     height: 200px;
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.model{
+    display: none;
+    visibility: hidden;
 }
 
 #gif_logo{
