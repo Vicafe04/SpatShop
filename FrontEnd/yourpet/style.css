@@ -1,13 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 255, 200, 0.5);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background: #00eeff;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
+    border-radius: 50px;
 }
 
 header{
@@ -18,7 +34,83 @@ header{
     justify-content: center;
 }
 
-.model{
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.oculto {
+    display: none;
+    visibility: hidden;
+}
+
+.addReserva {
+    background-color: rgb(154, 255, 255);
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 420px;
+}
+
+.addReserva:hover {
+    background-color: rgb(0, 255, 255);
+}
+
+button {
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid black;
+    height: 800px;
+    width: 550px;
+    overflow: auto;
+    border-radius: 7px;
+}
+
+.list::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+    background-color: rgba(0, 255, 200, 0.5);
+}
+
+.list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background: #00eeff;
+}
+
+.list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+.item-list {
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    margin: 5px;
+    background-color: #63ffdd;
+}
+
+.model {
     display: none;
     visibility: hidden;
 }
