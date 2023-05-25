@@ -11,8 +11,16 @@
 
 <body onload="load()">
     <header>
-        <p width="30px"><a href="">HOME</a></p>
+        <div class="left-header">
+            <a href="../home/index.html">HOME</a>
+        </div>
         <img id="shiba_logo" height="300px" src="../../docs/IMG/shiba.png" alt="">
+        <div class="right-header">
+            <div class="reserva">
+                <button class="addReserva" onclick="reserva.classList.toggle('oculto');">Reservar</button>
+            </div>
+            <button class="delPet"></button>
+        </div>
     </header>
     <img id="gif_logo" height="100px" src="../docs/spatshop.gif" alt="">
     <div class="list">
@@ -20,12 +28,21 @@
             <p class="list-info" id="id"></p>
             <p class="list-info" id="nome"></p>
             <p class="list-info" id="porte"></p>
-            <p class="list-info" id="descricao"></p>
         </div>
     </div>
-    <button class="addPet">Cadastre seu pet</button>
-    <div> 
+    <div id="reserva" class="modal oculto">
+        <div class="form">
+            <input type="number" name="petId" id="inpId">
+            <select class="opcList" name="" id="">
+                <option id="" value="">Selecione seu pet</option>
+            </select>
+            <textarea name=""
+                placeholder="EXEMPLO: Estadia de no maximo até 7 dias.Banho e tosa quinta feira e treinamento sexta feira."
+                id="observations" cols="30" rows="10"></textarea>
+            <button class="confirmBTN" onclick="reservar()">Confirmar</button>
+            <button onclick="reserva.classList.toggle('oculto')" class="modal_close">X</button>
 
+        </div>
     </div>
 </body>
 <script src="./script.js"></script>

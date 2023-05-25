@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards Add</title>
+</head>
+<style>
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid #000;
+    }
+    main{
+        border: 1px solid black;
+        width: 250px;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+        justify-content:left;
+    }
+    .card{
+        margin: 10px;
+        width: 200px;
+        padding: 20px;
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <header>Cards</header>
+    <main id="cards" class="addModel">
+        <div class="card">
+            <input type="text" id="nome">
+            <button onclick="novoCard(nome.value)">+</button>
+        </div>
+    </main>
+</body>
+<script>
+    function novoCard(nome){
+        const cards = document.querySelector("#cards");
+        const card = document.createElement("div");
+        const texto = document.createElement("p");
+        card.classList.add("card")
+        texto.innerHTML = nome;
+        card.appendChild(texto)
+        cards.appendChild(card)
+        cards.style.width = '550px';
+    }
+</script>
+</html>

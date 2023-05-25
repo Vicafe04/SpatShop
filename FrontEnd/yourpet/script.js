@@ -16,7 +16,6 @@ function load() {
                 item.querySelector("#id").innerHTML = 'Id:<br/>' + e.id;
                 item.querySelector("#nome").innerHTML = 'Nome:<br/>' + e.nome;
                 item.querySelector("#porte").innerHTML = 'Porte:<br/>' + e.porte;
-                item.querySelector("#descricao").innerHTML = '       Descrição:<br/>' + e.descricao;
                 
                 lista.appendChild(item);
             })

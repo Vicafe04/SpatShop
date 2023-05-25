@@ -31,7 +31,8 @@ header{
     height: 200px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 1500px;
 }
 
 .modal {
@@ -60,7 +61,7 @@ button {
 .addPet {
     background-color: rgb(154, 255, 255);
     width: 150px;
-    height: 30px;
+    height: 50px;
 }
 
 .addPet:hover {
@@ -96,11 +97,11 @@ button {
 
 .item-list {
     width: 250px;
-    height: 400px;
+    height: 300px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 50px;
     margin: 5px;
@@ -111,6 +112,8 @@ button {
     display: none;
     visibility: hidden;
 }
+
+
 
 #gif_logo{
     margin-right: 125px;
@@ -125,4 +128,8 @@ button {
 #porte,
 #descricao{
     font-size: 20px;
+}
+
+#descricao{
+    
 }
