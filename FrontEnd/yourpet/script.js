@@ -13,11 +13,13 @@ function load() {
             frota.forEach(e => {
                 let item = itemlista.cloneNode(true);
                 item.classList.remove("model");
-                item.querySelector("#id").innerHTML = 'Id:<br/>' + e.id;
-                item.querySelector("#nome").innerHTML = 'Nome:<br/>' + e.nome;
-                item.querySelector("#porte").innerHTML = 'Porte:<br/>' + e.porte;
+                item.querySelector("#id").innerHTML = '<strong>Id: </strong>' + e.id;
+                item.querySelector("#nome").innerHTML = '<strong>Nome: </strong>' + e.nome;
+                item.querySelector("#porte").innerHTML = '<strong>Porte: </strong>' + e.porte;
+                item.querySelector("#descricao").innerHTML = '<strong>Descricao: </strong>' + e.descricao;
                 
                 lista.appendChild(item);
             })
         })
 }
+
