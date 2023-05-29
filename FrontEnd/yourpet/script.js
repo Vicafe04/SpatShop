@@ -1,25 +1,47 @@
-const lista = document.querySelector('.list')
-const itemlista = document.querySelector('.item-list')
+const cards = document.querySelector('.cards')
+const card = document.querySelector('.card')
 const userID = localStorage.getItem('userID')
+const removeBTN = document.querySelector('.remove')
 
 function load() {
     const options = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     };
-    fetch("http://localhost:3000/Pet",options)
+    fetch("http://localhost:3000/Pet", options)
         .then(resp => { return resp.json() })
-        .then(frota => {
-            frota.forEach(e => {
-                let item = itemlista.cloneNode(true);
-                item.classList.remove("model");
-                item.querySelector("#id").innerHTML = '<strong>Id: </strong>' + e.id;
-                item.querySelector("#nome").innerHTML = '<strong>Nome: </strong>' + e.nome;
-                item.querySelector("#porte").innerHTML = '<strong>Porte: </strong>' + e.porte;
-                item.querySelector("#descricao").innerHTML = '<strong>Descricao: </strong>' + e.descricao;
-                
-                lista.appendChild(item);
+        .then(pet => {
+            pet.forEach(e => {
+                novoCard(e.id, e.nome, e.porte, e.descricao)
             })
         })
 }
 
+function novoCard(id, nome, porte, descricao) {
+
+    const cards = document.querySelector("#cards");
+    const card = document.createElement("div");
+    const Pid = document.createElement("p");
+    const Pnome = document.createElement("p");
+    const Pporte = document.createElement("p");
+    const Pdescricao = document.createElement("p");
+    const remover = document.createElement("button");
+    remover.classList.add("remove")
+    card.classList.add("card")
+    Pid.innerHTML = id;
+    Pnome.innerHTML = nome;
+    Pporte.innerHTML = porte;
+    Pdescricao.innerHTML = descricao;
+    remover.innerHTML = "Remover";
+    card.appendChild(Pid)
+    card.appendChild(Pnome)
+    card.appendChild(Pporte)
+    card.appendChild(Pdescricao)
+    card.appendChild(remover)
+    cards.appendChild(card)
+}
+
+
+
+function deletar(id){
+}

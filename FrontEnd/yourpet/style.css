@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+strong{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -58,13 +62,7 @@ button {
     font-size: 15px;
 }
 
-.addPet {
-    background-color: rgb(154, 255, 255);
-    width: 150px;
-    height: 50px;
-}
-
-.addPet:hover {
+.box-end:hover {
     background-color: rgb(0, 255, 255);
 }
 
@@ -179,4 +177,78 @@ button {
 
 .addReserva:hover {
     background-color: rgb(0, 255, 255);
+}
+
+#cards {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.box-end{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #d2ffff;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: large;
+}
+
+a:hover{
+    text-decoration: underline; 
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 800px;
+    overflow: auto;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+#cards::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+    background-color: rgba(0, 255, 200, 0.5);
+}
+
+#cards::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background: #00eeff;
+}
+
+#cards::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+.card{
+    border: 1px solid #e6e7e8;
+    margin: 0 30px 30px 0;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 0px 10px 20px;
+}
+
+.box-end {
+    border: 1px solid #e6e7e8;
+    margin: 0 30px 30px 0;
+    height: 140px;
 }

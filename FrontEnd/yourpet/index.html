@@ -16,20 +16,15 @@
         </div>
         <img id="shiba_logo" height="300px" src="../../docs/IMG/shiba.png" alt="">
         <div class="right-header">
-            <div class="reserva">
-                <button class="addReserva" onclick="reserva.classList.toggle('oculto');"><img width="30px" src="../docs/add.png" alt=""><br/>Reservar</button>
-            </div>
-            <button class="delPet"></button>
+
         </div>
     </header>
     <img id="gif_logo" height="100px" src="../docs/spatshop.gif" alt="">
-    <div class="list">
-        <div class="item-list model">
-            <p class="list-info" id="id"></p>
-            <p class="list-info" id="nome"></p>
-            <p class="list-info" id="porte"></p>
-            <p class="list-info" id="descricao"></p>
-        </div>
+    <div id="cards">
+        <a href="" class="box-end col-md-5 text-center" onclick="reserva.classList.toggle('oculto');">
+            <img width="30px" src="../docs/add.png" alt="">
+            <strong>Adicionar novo PET</strong>
+        </a>
     </div>
     <div id="reserva" class="modal oculto">
         <div class="form">
@@ -42,9 +37,9 @@
                 <option value="Grande">Grande(25 a 45 quilos)</option>
                 <option value="Gigante">Gigante(acima de 45 quilos)</option>
             </select>
-            <textarea name=""
-                placeholder="Animal, raça, temperamento e etc." id="inpDesc" cols="30" rows="10"></textarea>
-            <button class="confirmBTN" onclick="reservar()">Confirmar</button>
+            <textarea name="" placeholder="Animal, raça, temperamento e etc." id="inpDesc" cols="30"
+                rows="10"></textarea>
+            <button class="confirmBTN" onclick="novoCard()">Confirmar</button>
             <button onclick="reserva.classList.toggle('oculto')" class="modal_close">X</button>
 
         </div>
