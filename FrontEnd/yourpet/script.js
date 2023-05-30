@@ -32,7 +32,10 @@ function novoCard(id, nome, porte, descricao) {
     Pnome.innerHTML = nome;
     Pporte.innerHTML = porte;
     Pdescricao.innerHTML = descricao;
-    remover.innerHTML = "Remover";
+    remover.innerHTML = "remover";
+    remover.addEventListener("click", ()=>{
+        deletar(id)
+    })
     card.appendChild(Pid)
     card.appendChild(Pnome)
     card.appendChild(Pporte)
@@ -41,7 +44,11 @@ function novoCard(id, nome, porte, descricao) {
     cards.appendChild(card)
 }
 
-
+function revealModal() {
+    reserva.classList.toggle('oculto');
+}
 
 function deletar(id){
+    console.log(id)
 }
+
