@@ -28,8 +28,8 @@
     </div>
     <div id="reserva" class="modal oculto">
         <div class="form">
-            <input placeholder="Nome do pet" type="text" name="petId" id="inpName">
-            <select name="" id="inpPort">
+            <input type="text" name="" id="inpNome">
+            <select name="" id="inpPorte">
                 <option value="">Porte do seu pet</option>
                 <option value="mini">mini(até 6)</option>
                 <option value="Pequeno">Pequeno(6 a 15 quilos)</option>
@@ -37,9 +37,9 @@
                 <option value="Grande">Grande(25 a 45 quilos)</option>
                 <option value="Gigante">Gigante(acima de 45 quilos)</option>
             </select>
-            <textarea name="" placeholder="Animal, raça, temperamento e etc." id="inpDesc" cols="30"
+            <textarea name="" placeholder="Animal, raça, temperamento e etc." id="inpDescricao" cols="30"
                 rows="10"></textarea>
-            <button class="confirmBTN" onclick="novoCard()">Confirmar</button>
+            <button class="confirmBTN" onclick="cadastrarPet()">Confirmar</button>
             <button onclick="reserva.classList.toggle('oculto')" class="modal_close">X</button>
 
         </div>

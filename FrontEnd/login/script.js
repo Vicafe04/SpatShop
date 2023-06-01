@@ -18,7 +18,7 @@ function login() {
         body: JSON.stringify(dados)
     };
 
-    fetch("http://localhost:3000/login", options)
+    fetch(urlLogin, options)
         .then((response) => {
             return response.json();
         })
@@ -29,7 +29,6 @@ function login() {
             }
 
             if (acc == true) {
-                alert("Acesso permitido");
                 localStorage.setItem('userID', data.id);
                 window.location.href = "../home/index.html";
             } else {

@@ -2,6 +2,9 @@ const cards = document.querySelector('.cards')
 const card = document.querySelector('.card')
 const userID = localStorage.getItem('userID')
 const removeBTN = document.querySelector('.remove')
+const inpNome = document.getElementById('inpNome')
+const inpPorte = document.getElementById('inpPorte')
+const inpDescricao = document.getElementById('inpDescricao')
 
 function load() {
     const options = {
@@ -49,6 +52,39 @@ function revealModal() {
 }
 
 function deletar(id){
-    console.log(id)
+    const options = {
+        method: 'DELETE'
+    };
+    fetch(`http://localhost:3000/Pet/${id}`, options)
+        .then(resp => resp.status)
+        .then(resp => {
+            if (resp == 200) {
+                window.location.reload();
+            }
+        })
+        .catch(err => alert("Erro ao enviar dados, Erro:" + err));
 }
 
+function cadastrarPet() {
+    var dados = {
+      nome: inpNome.value,
+      porte: inpPorte.value,
+      descricao: inpDescricao.value,
+      userId: Number(userID),
+    }
+    console.log(dados);
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dados),
+    }
+  
+    fetch("http://localhost:3000/Pet", options)
+      .then((resp) => resp.status)
+      .then((resp) => {
+        if (resp == 201) 
+        window.location.reload();
+        else console.log(resp);
+      })
+      .catch((err) => console.error(err));
+  }
