@@ -245,6 +245,7 @@ a:hover{
     flex-direction: column;
     justify-content: space-evenly;
     padding: 10px 0px 10px 20px;
+    background-color: #D2FFFF;
 }
 
 .box-end {
@@ -255,7 +256,14 @@ a:hover{
 
 .remove{
     width: 100px;
-    position:relative   ;
-    top: -100px;
-    left: 230px;
+    display: flex;
+    justify-content: center;
+    margin-left: 220px;
+}
+
+#home{
+    display: flex;
+    margin: 90px;
+    color: #000ba8;
+    font-size: 22px;
 }

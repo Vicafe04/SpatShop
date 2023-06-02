@@ -39,11 +39,11 @@ function novoCard(id, nome, porte, descricao) {
     remover.addEventListener("click", ()=>{
         deletar(id)
     })
+    card.appendChild(remover)
     card.appendChild(Pid)
     card.appendChild(Pnome)
     card.appendChild(Pporte)
     card.appendChild(Pdescricao)
-    card.appendChild(remover)
     cards.appendChild(card)
 }
 
