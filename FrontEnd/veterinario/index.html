@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/FrontEnd/docs/patas.png" type="image/x-icon">
-    <title>Veterinario</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
-<body>
+
+<body onload="load()">
     <header>
-        <div class="table-header">
-            <h1 class="leiter-header">
-                Spat-Shop
-            </h1>
-        </div>
+        <img id="shiba_logo" height="300px" src="../../docs/IMG/shiba.png" alt="">
     </header>
-    <button class="btn-modal" id="abrirModal">Serviços</button>
-    <div id="meuModal" class="modal">
-        <div class="modal-conteudo">
-        <span class="fechar">&times;</span>
-            <div class="leiter-modal">
-                <p>Insira o ID do Pet</p>
-                <input type="text" placeholder="Insira o ID"><br>
-                <label for="raca">Tipos de serviços</label><br>
-                <select name="raca" id="raca">
-                    <option value="#">Escolha uma das opções abaixo</option>
-                    <option value="">Veterinario</option>
-                    <option value="">Esteticista</option>
-                    <option value="">Treinador</option>
-                    <option value="">Osteopata</option>
-                </select>
-                <p>Descrição do Serviço</p>
-                <input type="text" placeholder="Descrição"><br>
-                <button onclick="cadastrarServicoBtn()" class="btn">Cadastrar Serviço</button>
+    <img id="gif_logo" height="100px" src="../docs/spatshop.gif" alt="">
+    <div class="bodyer">
+        <div class="left-container">
+            <h1>Reservas</h1>
+            <div class="list">
+                <div class="item-list model">
+                    <p id="hotelId"></p>
+                    <p id="nome"></p>
+                    <p id="porte"></p>
+                    <p id="descricao"></p>
+                    <p id="horaReserva"></p>
+                    <button id="delBTN">Cancelar reserva</button>
+                </div>
+            </div>
+            <div class="reserva">
+                <button class="addReserva" onclick="reserva.classList.toggle('oculto');
+            loadPet()">Reservar</button>
             </div>
         </div>
+        <div class="right-container">
+            
+        </div>
     </div>
-    <div class="table-body">
-        <ul id="lista-dados"></ul>
+    <div id="reserva" class="modal oculto">
+        <div class="form">
+            <select class="opcList" name="" id="">
+                <option id="" value="">Selecione uma das opções:</option>
+                <option id="" value="vet">Veterinario</option>
+                <option id="" value="est">Esteticista</option>
+                <option id="" value="tre">Treinador</option>
+                <option id="" value="ost">Osteopata</option>
+            </select>
+            <textarea name=""
+                placeholder="Descricao do atendimento EX: Veterinario: Sintomas e vacinas. Treinador: Comportamentos e comandos. Osteopata:"
+                id="ob" cols="30" rows="10"></textarea>
+            <button class="confirmBTN" onclick="reservar()">Confirmar</button>
+            <button onclick="reserva.classList.toggle('oculto')" class="modal_close">X</button>
+        </div>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="./script.js"></script>
+
 </html>

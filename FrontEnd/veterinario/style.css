@@ -1,90 +1,194 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    background-color: none;
+    box-sizing: border-box;
 }
 
-.table-header{
-    background-color: rgb(209, 209, 209);
-    height: auto;
-    width: 120vh;
-    margin-top: 2vh;
-    margin-left: 32vh;
-    border: 2px solid black;
-    border-radius: 30vh;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.leiter-header{
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 255, 200, 0.5);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background: #00eeff;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+header {
+    background: linear-gradient(#00f7ff, #0099ff);
+    height: 200px;
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 3vh;
-    font-size: 25vh;
-    color: rgb(192, 228, 228);
-    font-style: italic;
-    -webkit-text-stroke: 2px #000;
 }
 
-.table-body{
-    /* background-color: black; */
-    border: 2px solid black;
-    margin-top: 2vh;
-    margin-left: 52vh;
-    height: 60vh;
-    width: 80vh;
+.bodyer{
     display: flex;
-    justify-content: center;
+    margin-left: 20px;
 }
 
-/*Modal*/
+.left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 765px;
+    position: absolute;
+    left: 5px;
+    top: 200px;
+}
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
+    position: absolute;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.modal-conteudo {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 15%;
-    border: 2px solid black;
-    border-radius: 25px;
-    margin-top: 30vh;
+.oculto {
+    display: none;
+    visibility: hidden;
 }
 
-.fechar {
-    color: #aaa;
-    float: right;
-    font-size: 38px;
-    margin-top: -12px;
-    font-weight: bold;
-}
-
-.fechar:hover,
-.fechar:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.btn{
-    margin-top: 10px;
-    margin-left: 80px;
-}
-
-.btn-modal{
-    margin-left: 850px;
-    margin-top: 20px;
+.addReserva {
+    background-color: rgb(154, 255, 255);
+    width: 150px;
     height: 30px;
-    width: 120px;
-    border-radius: 40px;
-    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 420px;
+}
+
+.addReserva:hover {
+    background-color: rgb(0, 255, 255);
+}
+
+button {
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid black;
+    height: 800px;
+    width: 550px;
+    overflow: auto;
+    border-radius: 7px;
+}
+
+.list::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+    background-color: rgba(0, 255, 200, 0.5);
+}
+
+.list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background: #00eeff;
+}
+
+.list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+.item-list {
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    margin: 5px;
+    background-color: #63ffdd;
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+p {
+    margin: 5px;
+    font-size: 20px;
+}
+
+#delBTN {
+    height: 30px;
+    width: 150px;
+    background-color: rgb(255, 78, 78);
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    top: 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.modal_close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 20px;
+    width: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.confirmBTN{
+    background-color: #00eeff;
+    height: 30px;
+    width: 100px;
+}
+
+#gif_logo{
+    margin-right: 125px;
+}
+
+#shiba_logo{
+    position: absolute;
 }
