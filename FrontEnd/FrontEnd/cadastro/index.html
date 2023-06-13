@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../docs/patas.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Spat Shop
+        </h1>
+    </header>
+    <div class="table">
+        <div class="form">
+            <p class="leiter">
+                Insira seus Dados
+            </p>
+            <input id="name" type="text" placeholder="Nome e Sobrenome">
+            <input id="email" type="email" placeholder="Email ">
+            <input id="tel" type="text" placeholder="Telefone (00)12345-6789">
+            <input id="psw" type="password" placeholder="Senha">
+            <p id="psw_check">As senhas não coincidem</p>
+            <input id="confirm_psw" type="password" placeholder="Confirmar Senha">
+            <button id="submit" type="button" onclick="cadastrarUsuario()">Cadastro</button>
+            <a class="link" href="../login/index.html">Voltar para o Login</a>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

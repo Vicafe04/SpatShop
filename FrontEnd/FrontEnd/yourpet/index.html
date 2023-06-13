@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Your Pet</title>
+</head>
+
+<body onload="load()">
+    <header>
+        <div class="left-header">
+            <p><a id="home" href="../home/index.html">HOME</a></p>
+        </div>
+        <img id="shiba_logo" height="300px" src="../../docs/IMG/shiba.png" alt="">
+        <div class="right-header">
+
+        </div>
+    </header>
+    <img id="gif_logo" height="100px" src="../docs/spatshop.gif" alt="">
+    <div id="cards">
+        <a href="#" class="box-end col-md-5 text-center" onclick="revealModal()">
+            <img width="30px" src="../docs/add.png" alt="">
+            <strong>Adicionar novo PET</strong>
+        </a>
+    </div>
+    <div id="reserva" class="modal oculto">
+        <div class="form">
+            <input type="text" name="" id="inpNome">
+            <select name="" id="inpPorte">
+                <option value="">Porte do seu pet</option>
+                <option value="mini">mini(até 6)</option>
+                <option value="Pequeno">Pequeno(6 a 15 quilos)</option>
+                <option value="Médio">Médio(15 a 25 quilos)</option>
+                <option value="Grande">Grande(25 a 45 quilos)</option>
+                <option value="Gigante">Gigante(acima de 45 quilos)</option>
+            </select>
+            <textarea name="" placeholder="Animal, raça, temperamento e etc." id="inpDescricao" cols="30"
+                rows="10"></textarea>
+            <button class="confirmBTN" onclick="cadastrarPet()">Confirmar</button>
+            <button onclick="reserva.classList.toggle('oculto')" class="modal_close">X</button>
+
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

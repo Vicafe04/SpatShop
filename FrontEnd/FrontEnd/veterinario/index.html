@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body onload="load()">
+    <header>
+        <p><img src="" alt=""></p>
+        <img id="shiba_logo" height="300px" src="../../docs/IMG/shiba.png" alt="">
+    </header>
+    <img id="gif_logo" height="100px" src="../docs/spatshop.gif" alt="">
+    <div class="bodyer">
+        <div class="left-container">
+            <h1>Reservas</h1>
+            <div class="list">
+                <div class="item-list model">
+                    <p id="PetId"></p>
+                    <p id="nome"></p>
+                    <p id="area"></p>
+                    <p id="servico"></p>
+                    <p id="descricao"></p>
+                    <p id="horaReserva"></p>
+                    <button id="delBTN">Cancelar reserva</button>
+                </div>
+            </div>
+            <div class="reserva">
+                <button class="addReserva" onclick="reserva.classList.toggle('oculto');
+            loadPet()">Reservar</button>
+            </div>
+        </div>
+        <div class="right-container">
+            
+        </div>
+    </div>
+    <div id="reserva" class="modal oculto">
+        <div class="form">
+            <input type="number" name="petId" id="inpId">
+            <select class="opcList" name="" id="">
+                <option id="" value="">Selecione seu pet</option>
+            </select>
+            <select class="area">
+                <opc value="Veterinario">Veterinario</opc>
+                <opc value="Treinador">Treinador</opc>
+                <opc value="Esteticista">Esteticista</opc>
+                <opc value="Osteopata">Osteopata</opc>
+            </select>
+            <input type="text" name="" class="servico">
+            <textarea name=""
+                placeholder="EXEMPLO: ."
+                id="observations" cols="30" rows="10"></textarea>
+            <button class="confirmBTN" onclick="reservar()">Confirmar</button>
+            <button onclick="reserva.classList.toggle('oculto')" class="modal_close">X</button>
+
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
