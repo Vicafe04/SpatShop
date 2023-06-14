@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-strong{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+strong, p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -30,20 +30,20 @@ body::-webkit-scrollbar-track {
     border-radius: 50px;
 }
 
-header{
+header {
     background: linear-gradient(#00f7ff, #0099ff);
     height: 200px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     gap: 1500px;
 }
 
 .modal {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    /* top: 0; */
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
@@ -58,7 +58,7 @@ header{
 
 button {
     border-radius: 50px;
-    font-weight:700;
+    font-weight: 700;
     font-size: 15px;
 }
 
@@ -123,7 +123,7 @@ button {
     background-color: transparent;
 }
 
-.modal_close:hover{
+.modal_close:hover {
     color: black;
 }
 
@@ -146,22 +146,23 @@ button {
 
 
 
-#gif_logo{
+#gif_logo {
     margin-right: 125px;
 }
 
-#shiba_logo{
+#shiba_logo {
     position: absolute;
+    top: 0px;
 }
 
 #id,
 #nome,
 #porte,
-#descricao{
+#descricao {
     font-size: 20px;
 }
 
-#descricao{
+#descricao {
     margin-left: 10px;
     width: 150px;
     display: flex;
@@ -179,20 +180,13 @@ button {
     background-color: rgb(0, 255, 255);
 }
 
-#cards {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-    gap: 5px;
-}
+
 
 .text-center {
     text-align: center;
 }
 
-.box-end{
+.box-end {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -201,14 +195,14 @@ button {
     background-color: #d2ffff;
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
     font-size: large;
 }
 
-a:hover{
-    text-decoration: underline; 
+a:hover {
+    text-decoration: underline;
 }
 
 #cards {
@@ -237,7 +231,7 @@ a:hover{
     border-radius: 50px;
 }
 
-.card{
+.card {
     border: 1px solid #e6e7e8;
     margin: 0 30px 30px 0;
     height: 140px;
@@ -252,18 +246,200 @@ a:hover{
     border: 1px solid #e6e7e8;
     margin: 0 30px 30px 0;
     height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #d2ffff;
 }
 
-.remove{
+.remove {
     width: 100px;
     display: flex;
     justify-content: center;
-    margin-left: 220px;
+    margin-left: 65%;
+    border: none;
+    background-color: rgb(50, 255, 228);
 }
 
-#home{
+#home {
     display: flex;
-    margin: 90px;
     color: #000ba8;
     font-size: 22px;
+}
+
+@media only screen and (max-width: 1570px) {
+    header {
+        background: linear-gradient(#00f7ff, #0099ff);
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1100px;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    header {
+        background: linear-gradient(#00f7ff, #0099ff);
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 700px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        background: linear-gradient(#00f7ff, #0099ff);
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 600px;
+    }
+
+    #home{
+        width: 50px;
+    }
+
+    #cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 500px;
+        overflow: auto;
+        border-radius: 7px;
+        padding: 10px;
+    }
+    
+    #cards::-webkit-scrollbar {
+        width: 12px;
+        height: 8px;
+        background-color: rgba(0, 255, 200, 0.5);
+    }
+    
+    #cards::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        background: #00eeff;
+    }
+    
+    #cards::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255);
+        border-radius: 50px;
+    }
+    
+    .card {
+        border: 1px solid #e6e7e8;
+        margin: 0 30px 30px 30px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 10px 0px 10px 20px;
+        background-color: #D2FFFF;
+    }
+
+    .box-end {
+        border: 1px solid #e6e7e8;
+        margin: 0 30px 30px 30px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #d2ffff;
+    }
+
+    .remove {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        margin-left: 70%;
+        border: none;
+        background-color: rgb(50, 255, 228);
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    header {
+        background: linear-gradient(#00f7ff, #0099ff);
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 400px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    header {
+        background: linear-gradient(#00f7ff, #0099ff);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 200px;
+    }
+
+    #gif_logo {
+        margin-right: 125px;
+    }
+    
+    #shiba_logo {
+        position: absolute;
+        top: -16px;
+        height: 250px;
+    }
+
+    #cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 400px;
+        overflow: auto;
+        border-radius: 7px;
+        padding: 10px;
+    }
+
+    .card {
+        border: 1px solid #e6e7e8;
+        margin: 0 30px 30px 30px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 10px 0px 10px 20px;
+        background-color: #D2FFFF;
+    }
+
+    .box-end {
+        border: 1px solid #e6e7e8;
+        margin: 0 30px 30px 30px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #d2ffff;
+    }
+
+    .remove {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        margin-left: 70%;
+        border: none;
+        background-color: rgb(50, 255, 228);
+    }
 }

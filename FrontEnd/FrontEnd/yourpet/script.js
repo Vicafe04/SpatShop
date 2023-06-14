@@ -24,26 +24,26 @@ function novoCard(id, nome, porte, descricao) {
 
     const cards = document.querySelector("#cards");
     const card = document.createElement("div");
-    const Pid = document.createElement("p");
-    const Pnome = document.createElement("p");
-    const Pporte = document.createElement("p");
-    const Pdescricao = document.createElement("p");
+    const strgId = document.createElement("strong");
+    const strgNome = document.createElement("strong");
+    const strgPorte = document.createElement("strong");
+    const strgescricao = document.createElement("strong");
     const remover = document.createElement("button");
     remover.classList.add("remove")
     card.classList.add("card")
-    Pid.innerHTML = id;
-    Pnome.innerHTML = nome;
-    Pporte.innerHTML = porte;
-    Pdescricao.innerHTML = descricao;
+    strgId.innerHTML = id;
+    strgNome.innerHTML = nome;
+    strgPorte.innerHTML = porte;
+    strgescricao.innerHTML = descricao;
     remover.innerHTML = "remover";
-    remover.addEventListener("click", ()=>{
+    remover.addEventListener("click", () => {
         deletar(id)
     })
     card.appendChild(remover)
-    card.appendChild(Pid)
-    card.appendChild(Pnome)
-    card.appendChild(Pporte)
-    card.appendChild(Pdescricao)
+    card.appendChild(strgId)
+    card.appendChild(strgNome)
+    card.appendChild(strgPorte)
+    card.appendChild(strgescricao)
     cards.appendChild(card)
 }
 
@@ -51,7 +51,7 @@ function revealModal() {
     reserva.classList.toggle('oculto');
 }
 
-function deletar(id){
+function deletar(id) {
     const options = {
         method: 'DELETE'
     };
@@ -67,24 +67,24 @@ function deletar(id){
 
 function cadastrarPet() {
     var dados = {
-      nome: inpNome.value,
-      porte: inpPorte.value,
-      descricao: inpDescricao.value,
-      userId: Number(userID),
+        nome: inpNome.value,
+        porte: inpPorte.value,
+        descricao: inpDescricao.value,
+        userId: Number(userID),
     }
     console.log(dados);
     const options = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(dados),
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados),
     }
-  
+
     fetch("http://localhost:3000/Pet", options)
-      .then((resp) => resp.status)
-      .then((resp) => {
-        if (resp == 201) 
-        window.location.reload();
-        else console.log(resp);
-      })
-      .catch((err) => console.error(err));
-  }
+        .then((resp) => resp.status)
+        .then((resp) => {
+            if (resp == 201)
+                window.location.reload();
+            else console.log(resp);
+        })
+        .catch((err) => console.error(err));
+}
