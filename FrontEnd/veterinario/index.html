@@ -12,6 +12,7 @@
 <body onload="load()">
     <header>
         <img id="shiba_logo" height="300px" src="../../docs/IMG/shiba.png" alt="">
+
     </header>
     <img id="gif_logo" height="100px" src="../docs/spatshop.gif" alt="">
     <div class="bodyer">
@@ -19,11 +20,10 @@
             <h1>Reservas</h1>
             <div class="list">
                 <div class="item-list model">
-                    <p id="hotelId"></p>
-                    <p id="nome"></p>
-                    <p id="porte"></p>
+                    <p id="PetId"></p>
+                    <p id="area"></p>
+                    <p id="servico"></p>
                     <p id="descricao"></p>
-                    <p id="horaReserva"></p>
                     <button id="delBTN">Cancelar reserva</button>
                 </div>
             </div>
@@ -33,23 +33,26 @@
             </div>
         </div>
         <div class="right-container">
-            
+
         </div>
     </div>
     <div id="reserva" class="modal oculto">
         <div class="form">
+            <input type="number" name="petId" id="inpId">
             <select class="opcList" name="" id="">
-                <option id="" value="">Selecione uma das opções:</option>
-                <option id="" value="vet">Veterinario</option>
-                <option id="" value="est">Esteticista</option>
-                <option id="" value="tre">Treinador</option>
-                <option id="" value="ost">Osteopata</option>
+                <option id="" value="">Selecione seu pet</option>
             </select>
-            <textarea name=""
-                placeholder="Descricao do atendimento EX: Veterinario: Sintomas e vacinas. Treinador: Comportamentos e comandos. Osteopata:"
-                id="ob" cols="30" rows="10"></textarea>
+            <select class="area">
+                <option value="Veterinario">Veterinario</option>
+                <option value="Treinador">Treinador</option>
+                <option value="Esteticista">Esteticista</option>
+                <option value="Osteopata">Osteopata</option>
+            </select>
+            <input placeholder="serviço" type="text" name="" class="servico">
+            <textarea name="" placeholder="EXEMPLO: O pet esta hospedado no hotel numero 14." id="observations" cols="30" rows="10"></textarea>
             <button class="confirmBTN" onclick="reservar()">Confirmar</button>
             <button onclick="reserva.classList.toggle('oculto')" class="modal_close">X</button>
+
         </div>
     </div>
 </body>

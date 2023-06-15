@@ -55,14 +55,14 @@ function reservar() {
     if(descricao.value == null)
     descricao.value = "";
     let dados = {
-        descricao: descricao.value,
-        petId: Number(inpId.value)
+        petId: Number(inpId.value),
+        descricao: descricao.value
     }
     const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dados)
-    };
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dados),
+      };
     fetch("http://localhost:3000/Hotel", options)
         .then(response => {
             return response.json();
