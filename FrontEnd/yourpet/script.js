@@ -15,7 +15,10 @@ function load() {
         .then(resp => { return resp.json() })
         .then(pet => {
             pet.forEach(e => {
-                novoCard(e.id, e.nome, e.porte, e.descricao)
+                console.log(userID)
+                if(userID == e.userId){
+                    novoCard(e.id, e.nome, e.porte, e.descricao)
+                }
             })
         })
 }

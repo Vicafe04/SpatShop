@@ -28,7 +28,7 @@ function cadastrarUsuario() {
         else console.log(resp);
       })
       .catch((err) => console.error(err));
-  }else{
-    equalPSW.classList.toggle('oculto');
-  }
+    }else{
+      alert("SENHAS NÃO COINCIDEM")
+    }
 }

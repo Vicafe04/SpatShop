@@ -46,8 +46,9 @@ h1{
 }
 
 .table{
+    margin-top: 20px;
     background-color: #00ccff;
-    height: 400px;
+    height: 620px;
     width: 500px;
     border-radius: 55px;
     display: flex;
