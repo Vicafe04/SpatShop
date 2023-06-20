@@ -9,7 +9,7 @@
   * "npx prisma migrate dev --name init"
   * "nodemon"
 * No VsCode clique em "Go Live" na parte inferior direita do VsCode e assim q a pagina web abrir vá até o arquivo "FrontEnd/login/index.html"
-  * Pastas
-   * ./docs (Documento do projeto, arquivo de testes insomnia)
-   * ./back (API ou BackEnd MVC)
-   * ./front (Interface Web)
+* Pastas
+ * ./docs (Documento do projeto, arquivo de testes insomnia)
+ * ./back (API ou BackEnd MVC)
+ * ./front (Interface Web)
