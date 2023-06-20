@@ -1,5 +1,5 @@
 # SpatShop
-*O que é necessário ter intalado (NodeJS, XAMPP, Live Server(extenção do Vscode))
+* O que é necessário ter intalado (NodeJS, XAMPP, Live Server(extenção do Vscode))
 *Qual a ordem da execução:
 *Abrir o Xampp (clicar em Start em MySQL e apache)
 *Abrir com VsCode
