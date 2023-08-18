@@ -4,9 +4,11 @@ const opcList = document.querySelector('.opcList')
 const userID = localStorage.getItem('userID')
 const inpId = document.querySelector('#inpId')
 const descricao = document.querySelector('#observations')
+
+
 function load() {
     fetch("http://localhost:3000/Servicos")
-        .then(resp => { return resp.json() })
+        .then(resp => { return resp.json()})
         .then(reserva => {
             reserva.forEach(e => {
                 let item = itemlista.cloneNode(true);
